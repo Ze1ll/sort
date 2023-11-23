@@ -39,7 +39,15 @@
 		}
 		return sortedmatrix;
 	}
-
+	static void PrintArray(int[,] matr)
+	{
+		for (int i = 0; i < matr.GetLength(0); i++)
+		{
+			for (int j = 0; j < matr.GetLength(1); j++)
+				Console.Write($"{matr[i, j]}\t");
+			Console.WriteLine($"\n");
+		}
+	}
 
 
 	static void Main(string[] args)
@@ -47,7 +55,7 @@
 	{
 
 		int[,] a = { { 7, 3, 2 }, { 4, 9, 6 }, { 1, 8, 5 } };
-		Sort(a);
-
+		int[,]sortedmatrix = Sort(a);
+		PrintArray(sortedmatrix);
 	}
 }
